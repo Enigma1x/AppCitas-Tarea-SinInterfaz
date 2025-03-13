@@ -30,9 +30,9 @@ Clona este repositorio o descarga el código fuente.
 Abre una terminal en la carpeta del proyecto.
 Ejecuta el siguiente comando para compilar y ejecutar el proyecto:
 
-##bash
-Copy
+```bash
 dotnet run
+```
 
 Sigue las instrucciones en el menú para gestionar personas y citas.
 
