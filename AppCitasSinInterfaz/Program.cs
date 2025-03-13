@@ -155,8 +155,18 @@ namespace AppCitas
         {
             Console.WriteLine("Nombre (Solo el nombre): ");
             string nombre = Console.ReadLine();
+            //Console.WriteLine("Fecha de nacimiento (yyyy-mm-dd): ");
+            //DateTime fechaNacimiento = Convert.ToDateTime(Console.ReadLine());
             Console.WriteLine("Fecha de nacimiento (yyyy-mm-dd): ");
-            DateTime fechaNacimiento = Convert.ToDateTime(Console.ReadLine());
+            string input = Console.ReadLine();
+            DateTime fechaNacimiento;
+            while (!DateTime.TryParseExact(input, "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out fechaNacimiento))
+            {
+                Console.WriteLine("Formato de fecha no válido. Por favor, ingrese la fecha en el formato yyyy-mm-dd: ");
+                input = Console.ReadLine();
+            }
+
+
             Console.WriteLine("Lugar de nacimiento: ");
             string lugarNacimiento = Console.ReadLine();
 
@@ -176,7 +186,14 @@ namespace AppCitas
             }
             Console.WriteLine("Para que dia quiere agregar la cita? ");
             Console.WriteLine("Dia de la Cita (yyyy-mm-dd): ");
-            DateTime dia = DateTime.Parse(Console.ReadLine());
+            string input = Console.ReadLine();
+            DateTime dia;
+            while (!DateTime.TryParseExact(input, "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out dia))
+            {
+                Console.WriteLine("Formato de fecha no válido. Por favor, ingrese la fecha en el formato yyyy-mm-dd: ");
+                input = Console.ReadLine();
+            }
+
             Console.WriteLine("Hora de la Cita (hh:mm): ");
             string hora = Console.ReadLine();
             Console.WriteLine("Especialidad: ");
@@ -221,7 +238,13 @@ namespace AppCitas
                 return;
             }
             Console.WriteLine("Dia de la Cita (yyyy-mm-dd): ");
-            DateTime dia = DateTime.Parse(Console.ReadLine());
+            string input = Console.ReadLine();
+            DateTime dia;
+            while (!DateTime.TryParseExact(input, "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out dia))
+            {
+                Console.WriteLine("Formato de fecha no válido. Por favor, ingrese la fecha en el formato yyyy-mm-dd: ");
+                input = Console.ReadLine();
+            }
             Cita cita = persona.Expediente.Citas.Find(c => c.Dia == dia);
             if (cita == null)
             {
@@ -279,7 +302,13 @@ namespace AppCitas
                 return;
             }
             Console.WriteLine("Dia de la Cita (yyyy-mm-dd): ");
-            DateTime dia = DateTime.Parse(Console.ReadLine());
+            string input = Console.ReadLine();
+            DateTime dia;
+            while (!DateTime.TryParseExact(input, "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out dia))
+            {
+                Console.WriteLine("Formato de fecha no válido. Por favor, ingrese la fecha en el formato yyyy-mm-dd: ");
+                input = Console.ReadLine();
+            }
             Cita cita = persona.Expediente.Citas.Find(c => c.Dia == dia);
             if (cita == null)
             {
