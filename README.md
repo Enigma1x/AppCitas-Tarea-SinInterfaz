@@ -55,5 +55,5 @@ Si deseas contribuir a este proyecto, siéntete libre de hacer un **fork** y env
 
 ## Licencia
 
-Este proyecto está bajo la licencia **MIT**. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto está bajo la licencia **MIT**. Consulta el archivo [LICENSE](https://github.com/Enigma1x/AppCitas-Tarea-SinInterfaz/blob/master/LICENSE.txt) para más detalles.
 
